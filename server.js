@@ -59,6 +59,13 @@ app.post('/event', (req, res) => {
     res.json(mockEvents);
 });
 
+// Deletes an event
+app.delete('/event', (req, res) => {
+    console.log('hello');
+    console.log(req);
+    res.json(mockEvents);
+});
+
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ message: err.message });
